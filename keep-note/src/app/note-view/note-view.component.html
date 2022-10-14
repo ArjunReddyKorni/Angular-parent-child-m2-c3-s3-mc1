@@ -1,5 +1,5 @@
 
 
-<app-search></app-search>
-<app-note ></app-note>
+<app-search (searchs)="search($event)"></app-search>
+<app-note [notes] = "notes"></app-note>
 <app-add-note ></app-add-note>

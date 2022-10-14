@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Note } from '../models/note';
-import { NOTES } from '../models/notes';
+//import { NOTES } from '../models/notes';
 
 @Component({
   selector: 'app-note',
@@ -9,8 +9,9 @@ import { NOTES } from '../models/notes';
 })
 export class NoteComponent implements OnInit {
 
+  @Input()
+  notes?:Note[] = [];
 
-  notes = NOTES;
   constructor() { }
 
   ngOnInit(): void {

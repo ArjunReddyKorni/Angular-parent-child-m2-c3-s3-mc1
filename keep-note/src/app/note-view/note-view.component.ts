@@ -9,6 +9,20 @@ import { NOTES } from '../models/notes';
 export class NoteViewComponent implements OnInit {
 
   notes = NOTES;
+  // text = ''
+
+
+  
+
+  search(searchText: string) {
+    if(searchText === '' || !searchText)
+      this.notes = NOTES;
+    else
+    {
+      this.notes = NOTES;
+      this.notes = this.notes.filter(note => note.title?.startsWith(searchText));
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
